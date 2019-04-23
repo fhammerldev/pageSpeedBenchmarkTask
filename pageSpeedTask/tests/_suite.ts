@@ -27,7 +27,7 @@ describe('Sample task tests', function () {
         assert.equal(tr.succeeded, false, 'should have failed');
         assert.equal(tr.warningIssues, 0, "should have no warnings");
         assert.equal(tr.errorIssues.length, 1, "should have 1 error issue");
-        assert.equal(tr.errorIssues[0], 'Not implemented, should alawys fail, input was anything', 'error issue output');
+        assert.equal(tr.errorIssues[0], 'Not implemented, should alawys fail, input was microsoft.com, wikipedia.org', 'error issue output');
         assert.equal(tr.stdout.indexOf('Hello bad'), -1, "Should not display Hello bad");
 
         done();

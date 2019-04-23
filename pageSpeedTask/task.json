@@ -14,12 +14,12 @@
     "instanceNameFormat": "PageSpeed Benchmark",
     "inputs": [
         {
-            "name": "samplestring",
+            "name": "urllist",
             "type": "string",
-            "label": "Sample String",
-            "defaultValue": "",
+            "label": "List of URLs to benchmark",
+            "defaultValue": "microsoft.com, wikipedia.org",
             "required": true,
-            "helpMarkDown": "A sample string"
+            "helpMarkDown": "A comma and space separated list of the URLs you would like to track in the format of 'microsoft.com, wikipedia.org' (no quotes necessary)"
         }
     ],
     "execution": {
