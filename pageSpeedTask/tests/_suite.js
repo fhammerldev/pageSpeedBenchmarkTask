@@ -1,27 +1,27 @@
-import * as path from 'path';
-import * as assert from 'assert';
-import * as ttm from 'azure-pipelines-task-lib/mock-test';
-
+"use strict";
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const path = __importStar(require("path"));
+const assert = __importStar(require("assert"));
+const ttm = __importStar(require("azure-pipelines-task-lib/mock-test"));
 describe('Sample task tests', function () {
-
     before(function () {
-
     });
-
     after(() => {
-
     });
-
     // it('should succeed with simple inputs', function(done: MochaDone) {
     //     // Add success test here
     // });
-
-    it('it should fail', function (done: MochaDone) {
+    it('it should fail', function (done) {
         this.timeout(1000);
-
         let tp = path.join(__dirname, 'failure.js');
-        let tr: ttm.MockTestRunner = new ttm.MockTestRunner(tp);
-
+        let tr = new ttm.MockTestRunner(tp);
         tr.run();
         console.log(tr.succeeded);
         assert.equal(tr.succeeded, false, 'should have failed');
@@ -29,7 +29,6 @@ describe('Sample task tests', function () {
         assert.equal(tr.errorIssues.length, 1, "should have 1 error issue");
         assert.equal(tr.errorIssues[0], 'Not implemented, should alawys fail, input was anything', 'error issue output');
         assert.equal(tr.stdout.indexOf('Hello bad'), -1, "Should not display Hello bad");
-
         done();
     });
 });
