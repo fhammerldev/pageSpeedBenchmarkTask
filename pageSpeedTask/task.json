@@ -1,0 +1,30 @@
+{
+    "id": "fa5a0f38-91d4-4a8d-8852-c65367926ba0",
+    "name": "PageSpeedBenchmark",
+    "friendlyName": "PageSpeed Benchmark",
+    "description": "Allows you to measure the pagespeed of individual websites that the current build or release may affect",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "Ferenc Hammerl",
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 0
+    },
+    "instanceNameFormat": "Echo 'PageSpeedBenchmark'",
+    "inputs": [
+        {
+            "name": "samplestring",
+            "type": "string",
+            "label": "Sample String",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "A sample string"
+        }
+    ],
+    "execution": {
+        "Node": {
+            "target": "index.js"
+        }
+    }
+}
