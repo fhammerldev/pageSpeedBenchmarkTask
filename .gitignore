@@ -1,3 +1,4 @@
 */node_modules
-pageSpeedTask/index.js
-FerencHammerl.pagespeed-benchmark-task-0.0.1.vsix
+*.vsix
+*.js
+pageSpeedTask/.taskkey
