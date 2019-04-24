@@ -14,7 +14,7 @@
     "instanceNameFormat": "PageSpeed Benchmark",
     "inputs": [
         {
-            "name": "urllist",
+            "name": "urlList",
             "type": "string",
             "label": "List of URLs to benchmark",
             "defaultValue": "microsoft.com, wikipedia.org",
